@@ -1,0 +1,366 @@
+/* COMMON STYLES */
+
+body{
+    padding: 100vh 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+img{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+header{ 
+    padding-bottom: 2em;
+}
+
+header h1{
+    font-size: 1.62em;
+    font-weight: 800;
+    padding: .5em 0;
+    color: #444;
+}
+
+section{
+    padding: 3em 0;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-left{
+    text-align: left;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width:1220px){
+    .container{
+        width: 800px;
+    }
+}
+
+.row-3>*{
+    display: inline-block;
+    width: 33%;
+    vertical-align: top;
+}
+
+/* COMMON ADAPTIVE STYLES */
+
+
+/* AWESOME FEATURES STYLES */
+.features figure{
+    animation: floating 3s infinite ;
+}
+
+.features img{
+    transform: scale(0.85);
+    transform-origin: top;
+    vertical-align: top;
+}
+
+.features h2{
+    font-size: 1em;
+    color: #444;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 1em 1.9em;
+    position: relative;
+}
+
+.features ul p{
+    border: 2px solid #ddd;
+    transition: 0.5s;
+}
+
+.features .text-right p{
+    border-right: 0;
+    position: relative;
+}
+
+.features .text-right p::after{
+    content: "";
+    display: block;
+    background-color: white;
+    height: 1em;
+    width: 100%;
+
+    position: absolute; 
+    bottom: -0.5em;
+    right: 0;
+    transition: 0.7s;
+}
+
+.features .text-right li:hover p::after{
+    width: 80%;
+}
+
+.features .text-left p{
+    border-left: 0;
+    position: relative;
+}
+
+.features .text-left p::after{
+    content: "";
+    display: block;
+    background-color: white;
+    height: 1em;
+    width: 100%;
+
+    position: absolute; 
+    bottom: -0.5em;
+    left: 0;
+    transition: 0.7s;
+}
+
+.features .text-left li:hover p::after{
+    width: 80%;
+}
+
+.features ul li:hover p{
+    border-color: blue;
+}
+
+.features .row-3 .text-right i{
+    background: #ddd;
+    padding: 0.5em;
+    border-radius: 100%;
+    position: relative;
+    color: #fff;
+    font-size: 1.5em;
+    bottom: -1.6em;
+    left: 1.3em;
+    z-index: 10;
+}
+
+.features .text-right :hover i {
+    background: blue;
+    transition: 0.5s;
+}
+
+.features .row-3 .text-left i{
+    background: #ddd;
+    padding: 0.5em;
+    border-radius: 100%;
+    position: relative;
+    color: #fff;
+    font-size: 1.5em;
+    bottom: -1.6em;
+    left: -1.3em;
+    z-index: 10;
+}
+
+.features .text-left :hover i {
+    background: blue;
+    transition: 0.5s;
+}
+
+.features p{
+    line-height: 1.5em;
+    padding: 1.5em 2.5em;
+    color: #777;
+}
+
+
+/* FEATURES ADAPTIVE STYLES */
+@media (max-width:1220px){
+    .container{
+        width: 100%;
+    }
+
+    .features .row-3>*{
+        width: 49%;
+        margin: auto;
+    }
+
+    .features figure{
+        display: none;
+    }
+
+    .features h2{
+        padding: 1em 3em;
+    }
+
+    .features p{
+        padding: 1.5em 2.5em;
+    }
+} 
+
+@media (max-width:890px){
+    .container{
+        width: 100%;
+    }
+
+    .features .row-3>*{
+        width: 49%;
+        margin: auto;
+    }
+
+    .features figure{
+        display: none;
+    }
+
+    .features h2{
+        padding: 1em 2em;
+    }
+
+    .features p{
+        padding: 1.5em 2.5em;
+    }
+} 
+
+@media (max-width:800px){
+    .container{
+        width: 95%;
+        margin: 5%;
+    }
+    .features .row-3>*{
+        width: 100%;
+        margin: auto;
+        text-align: left;
+    }
+
+    .features figure{
+        display: none;
+    }
+
+    .features h2{
+        padding: 1.5em 2.2em;
+        position: relative;
+    }
+
+    .features p{
+        padding: 1em 1.5em;
+    }
+
+    .features .row-3 .text-right i{
+        position: absolute;
+        color: #fff;
+        font-size: 1.3em;
+        bottom: -0.9em;
+        left: -0.5em;
+    }
+
+    .features .text-right p{
+        border-left: 0;
+        position: relative;
+    }
+
+    .features .text-right p::after{
+        content: "";
+        display: block;
+        background-color: white;
+        height: 1em;
+        width: 100%;
+    
+        position: absolute; 
+        bottom: -0.5em;
+        left: 0;
+        transition: 0.7s;
+    } 
+
+    .features .row-3 .text-left i{
+        position: absolute;
+        color: #fff;
+        font-size: 1.3em;
+        bottom: -0.9em;
+        left: -0.5em;
+    }
+} 
+
+@keyframes floating{
+    0%{transform: translateY(-2em);}
+    50%{transform: translateY(2em);}
+    100%{transform: translateY(-2em);}
+}
+
+/* VIDEO */
+.video {
+    padding: 8em 0;
+    background-image: 
+            linear-gradient(rgba(0, 0, 255, 0.377),rgba(34, 76, 138, 0.651)),
+            url(img/video-bg.jpg);
+    background-blend-mode: lighten;               
+    background-attachment: fixed;
+    background-position: center;
+    text-align: center;
+}
+
+.video button{
+    width: 5em;
+    height: 5em;
+    border-radius: 100%;
+    font-size: 1em;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: #fff;
+    position: relative;
+}
+
+.video button:hover{
+    background-color: blue;
+    color: #fff;
+}
+
+.video button .wave:last-child{
+    background-color: #fff;
+    width: 5em;
+    height: 5em;
+
+    display: block;
+    position: absolute;
+
+    border-radius: 100%;
+    top: 0;
+    left: 0;
+    animation: waveFadeOut 2s infinite;
+} 
+
+.video button .wave:nth-last-child(2){
+    background-color: #fff;
+    width: 7em;
+    height: 7em;
+
+    display: block;
+    position: absolute;
+
+    border-radius: 100%;
+    top: -1em;
+    left: -1em;
+    animation: waveFadeOut 2s infinite;
+    animation-delay: 0.5s;
+}
+
+.video button .wave:nth-last-child(3){
+    background-color: #fff;
+    width: 6em;
+    height: 6em;
+
+    display: block;
+    position: absolute;
+
+    border-radius: 100%;
+    top: -0.5em;
+    left: -0.5em;
+    animation: waveFadeOut 2s infinite;
+    animation-delay: 1s;
+}
+
+
+
+@keyframes waveFadeOut{
+    0%{ transform:scale(1); opacity: 0.5;}
+    100%{ transform:scale(2); opacity: 0;}
+}
